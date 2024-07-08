@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projeto JavaScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <input type="text" id="busca" placeholder="Buscar por título" aria-label="Buscar por título">
+    </header>
+
+    <main>
+        <section id="tarefas">
+            <h2>Tarefas <button id="btn-abrir-modal">Nova Tarefa</button></h2>
+            <ul id="lista"></ul>
+        </section>
+
+        <section id="overlay"></section>
+        <div id="criar-tarefa" class="modal">
+            <form id="submit-criar-nova-tarefa">
+                <h3>Criar tarefa
+                    <svg id="fechar-modal" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </h3>
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" required></textarea>
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Todos os direitos reservados</p>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
